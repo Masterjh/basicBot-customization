@@ -15,14 +15,7 @@
         //Load custom settings set below
         bot.retrieveSettings();
 
-             API.on(API.ADVANCE, function(){
-		 var waitlist = API.getWaitList()
-		 if (waitlist.length > 0) {
-    		API.sendChat ('/me @' + waitlist[1].username + ' You\'re up shortly!')
-    }
-	
-    else {console.log('The waitlist is empty, fools')}
-});
+
 	/*
          bot.commands.commandCommand = {
          command: 'cmd',
@@ -38,6 +31,14 @@
          }
 
          */
+         
+     	API.on(API.ADVANCE, function(){
+		var waitlist = API.getWaitList()
+		if (waitlist.length > 0) {
+    			API.sendChat ('/me @' + waitlist[1].username + ' You\'re up shortly!')
+    }
+    	else {console.log('The waitlist is empty, fools')}
+});
 
         bot.commands.baconCommand = {
             command: 'bacon',  //The command to be called. With the standard command literal this would be: !bacon
