@@ -109,8 +109,12 @@
         fbLink: null,
         youtubeLink: null,
         website: "http://reddit.com/r/trees",
-        intervalMessages: [],
-        messageInterval: 5,
+        intervalMessages: ["The !dc command has been set to 30 minutes"],
+      			  ["We do have some rules, see them here: http://i.imgur.com/kHBa5wD.png"],
+      			  ["For a list of what I can do, type !commands"],
+      			  ["Don't worry, be happy!"],
+      			  
+        messageInterval: 10,
         songstats: true,
         commandLiteral: "!",
         blacklists: {
