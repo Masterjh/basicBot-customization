@@ -1,6 +1,6 @@
 (function () {
     //Link location of your fork so you don't have to modify so many things.
-    var fork = "jbarney86";
+    var fork = "masterjh";
 		
     //Define our function responsible for extending the bot.
     function extend() {
@@ -66,7 +66,7 @@
         startupVolume: 25, // 0-100
         startupEmoji: true, // true or false
         cmdDeletion: true,
-        chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/yemasthui/basicBot/master/lang/en.json",
         maximumAfk: 120,
         afkRemoval: false,
         maximumDc: 30,
@@ -119,6 +119,6 @@
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/jbarney86/basicBot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/yemasthui/basicBot/master/basicBot.js", extend);
 
 }).call(this);
