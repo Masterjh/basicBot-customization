@@ -72,7 +72,7 @@
         afkRemoval: false,
         maximumDc: 30,
         bouncerPlus: false,
-        blacklistEnabled: false,
+        blacklistEnabled: true,
         lockdownEnabled: false,
         lockGuard: false,
         maximumLocktime: 10,
@@ -83,7 +83,7 @@
         timeGuard: true,
         maximumSongLength: 8,
         autodisable: true,
-        commandCooldown: 30,
+        commandCooldown: 60,
         usercommandsEnabled: true,
         lockskipPosition: 3,
         lockskipReasons: [
@@ -96,7 +96,7 @@
             ["unavailable", "The song you played was not available for some users. "]
         ],
         afkpositionCheck: 15,
-        afkRankCheck: "ambassador",
+        afkRankCheck: "bouncer",
         motdEnabled: false,
         motdInterval: 5,
         motd: "Temp message",
@@ -105,7 +105,7 @@
         welcome: true,
         opLink: null,
         rulesLink: "http://i.imgur.com/kHBa5wD.png", //Reached plugs character limit, so I just cropped a pic
-        themeLink: "All genres are welcome!", //Edit this with whatever jh, we just have a lot of new people ask what is played in the room
+        themeLink: "We play anything and everything!", //Edit this with whatever jh, we just have a lot of new people ask what is played in the room
         fbLink: null,
         youtubeLink: null,
         website: "http://reddit.com/r/trees",
