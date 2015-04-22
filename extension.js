@@ -114,7 +114,7 @@
       			  ["For a list of what I can do, type !commands"],
       			  ["Don't worry, be happy!"],
       			  
-        messageInterval: 10,
+        messageInterval: 5,
         songstats: true,
         commandLiteral: "!",
         blacklists: {
