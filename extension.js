@@ -1,5 +1,7 @@
 (function () {
-
+    //Link location of your fork so you don't have to modify so many things.
+    var fork = "jbarney86";
+		
     //Define our function responsible for extending the bot.
     function extend() {
         //If the bot hasn't been loaded properly, try again in 1 second(s).
@@ -13,10 +15,15 @@
         //Load custom settings set below
         bot.retrieveSettings();
 
-        /*
-         Extend the bot here, either by calling another function or here directly.
-         Model code for a bot command:
-
+             API.on(API.ADVANCE, function(){
+		 var waitlist = API.getWaitList()
+		 if (waitlist.length > 0) {
+    		API.sendChat ('/me @' + waitlist[1].username + ' You\'re up shortly!')
+    }
+	
+    else {console.log('The waitlist is empty, fools')}
+});
+	/*
          bot.commands.commandCommand = {
          command: 'cmd',
          rank: 'user/bouncer/mod/manager',
@@ -53,18 +60,25 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "BlazeBot4.2.0",
+        botName: "BlazeBot 4.2.0",
         language: "english",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        startupCap: 10, // 1-200
+        startupVolume: 25, // 0-100
+        startupEmoji: true, // true or false
+        cmdDeletion: true,
+        chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/en.json",
         maximumAfk: 120,
         afkRemoval: false,
         maximumDc: 30,
         bouncerPlus: false,
+        blacklistEnabled: false,
         lockdownEnabled: false,
         lockGuard: false,
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
+        voteSkip: false,
+        voteSkipLimit: 10,
         timeGuard: true,
         maximumSongLength: 8,
         autodisable: true,
@@ -84,23 +98,27 @@
         afkRankCheck: "ambassador",
         motdEnabled: false,
         motdInterval: 5,
-        motd: "Temporary Message of the Day",
+        motd: "Temp message",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: null,
-        themeLink: null,
+        rulesLink: "http://i.imgur.com/kHBa5wD.png", //Reached plugs character limit, so I just cropped a pic
+        themeLink: "All genres are welcome!", //Edit this with whatever jh, we just have a lot of new people ask what is played in the room
         fbLink: null,
         youtubeLink: null,
-        website: "http://www.reddit.com/r/trees",
+        website: "http://reddit.com/r/trees",
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
-        commandLiteral: "!"
+        commandLiteral: "!",
+        blacklists: {
+            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/nsfwList.json",
+            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/opList.json"
+        }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/MasterJh/basicBot/master/basicBot.js', extend);
+    $.getScript("https://rawgit.com/jbarney86/basicBot/master/basicBot.js", extend);
 
 }).call(this);
