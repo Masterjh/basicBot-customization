@@ -1,6 +1,6 @@
 (function () {
     //Link location of your fork so you don't have to modify so many things.
-    var fork = "masterJh";
+    var fork = "jbarney86";
 		
     //Define our function responsible for extending the bot.
     function extend() {
@@ -15,10 +15,15 @@
         //Load custom settings set below
         bot.retrieveSettings();
 
-        /*
-         Extend the bot here, either by calling another function or here directly.
-         Model code for a bot command:
-
+             API.on(API.ADVANCE, function(){
+		 var waitlist = API.getWaitList()
+		 if (waitlist.length > 0) {
+    		API.sendChat ('/me @' + waitlist[1].username + ' You\'re up shortly!')
+    }
+	
+    else {console.log('The waitlist is empty, fools')}
+});
+	/*
          bot.commands.commandCommand = {
          command: 'cmd',
          rank: 'user/bouncer/mod/manager',
@@ -114,6 +119,6 @@
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/masterJh/basicBot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/jbarney86/basicBot/master/basicBot.js", extend);
 
 }).call(this);
