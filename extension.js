@@ -1,5 +1,7 @@
 (function () {
-
+    //Link location of your fork so you don't have to modify so many things.
+    var fork = "Masterjh";
+		
     //Define our function responsible for extending the bot.
     function extend() {
         //If the bot hasn't been loaded properly, try again in 1 second(s).
@@ -12,6 +14,7 @@
 
         //Load custom settings set below
         bot.retrieveSettings();
+        
 
         /*
          Extend the bot here, either by calling another function or here directly.
@@ -31,6 +34,7 @@
          }
 
          */
+        
 
         bot.commands.baconCommand = {
             command: 'bacon',  //The command to be called. With the standard command literal this would be: !bacon
@@ -53,18 +57,25 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "BlazeBot4.2.0",
+        botName: "BlazeBot 4.2.0",
         language: "english",
+        startupCap: 1, // 1-200
+        startupVolume: 0, // 0-100
+        startupEmoji: false, // true or false
+        cmdDeletion: true,
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         maximumAfk: 120,
         afkRemoval: false,
-        maximumDc: 30,
+        maximumDc: 60,
         bouncerPlus: false,
+        blacklistEnabled: false,
         lockdownEnabled: false,
         lockGuard: false,
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
+        voteSkip: false,
+        voteSkipLimit: 10,
         timeGuard: true,
         maximumSongLength: 8,
         autodisable: true,
@@ -89,18 +100,22 @@
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: null,
+        rulesLink: "http://i.imgur.com/kHBa5wD.png",
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
-        website: "http://www.reddit.com/r/trees",
+        website: null,
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
-        commandLiteral: "!"
+        commandLiteral: "!",
+        blacklists: {
+            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleOPlist.json"
+        }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/MasterJh/basicBot/master/basicBot.js', extend);
+    $.getScript("https://rawgit.com/Masterjh/basicBot/master/basicBot.js", extend);
 
 }).call(this);
