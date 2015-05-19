@@ -1,6 +1,6 @@
 (function () {
     //Link location of your fork so you don't have to modify so many things.
-    var fork = "Masterjh";
+    var fork = "masterjh";
 		
     //Define our function responsible for extending the bot.
     function extend() {
@@ -15,7 +15,13 @@
         //Load custom settings set below
         bot.retrieveSettings();
         
-
+	API.on(API.ADVANCE, function(){
+	   var waitlist = API.getWaitList()
+	   if (waitlist.length > 0) {
+    		API.sendChat ('/me @' + waitlist[1].username + ' You\'re up shortly!')
+    }
+    else {console.log('The waitlist is empty, fools')}
+});
         /*
          Extend the bot here, either by calling another function or here directly.
          Model code for a bot command:
@@ -66,7 +72,7 @@
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         maximumAfk: 120,
         afkRemoval: false,
-        maximumDc: 30,
+        maximumDc: 60,
         bouncerPlus: false,
         blacklistEnabled: false,
         lockdownEnabled: false,
@@ -81,7 +87,7 @@
         autodisable: true,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        lockskipPosition: 3,
+        lockskipPosition: 2,
         lockskipReasons: [
             ["theme", "This song does not fit the room theme. "],
             ["op", "This song is on the OP list. "],
@@ -93,9 +99,9 @@
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
-        motdEnabled: false,
-        motdInterval: 5,
-        motd: "Temporary Message of the Day",
+        motdEnabled: true,
+        motdInterval: 10,
+        motd: "!roulette",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
@@ -105,7 +111,7 @@
         fbLink: null,
         youtubeLink: null,
         website: null,
-        intervalMessages: [],
+        intervalMessages: ["The !dc limit is set to 30 minutes", "You can view the room rules here: http://i.imgur.com/kHBa5wD.png", "!roulette is started after ever 10 songs."],
         messageInterval: 5,
         songstats: true,
         commandLiteral: "!",
@@ -116,6 +122,6 @@
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/Masterjh/basicBot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/masterjh/basicBot/master/basicBot.js", extend);
 
 }).call(this);
