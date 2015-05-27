@@ -14,7 +14,7 @@
 
         //Load custom settings set below
         bot.retrieveSettings();
-      
+
         /*
          Extend the bot here, either by calling another function or here directly.
          Model code for a bot command:
@@ -33,7 +33,6 @@
          }
 
          */
-        
 
         bot.commands.baconCommand = {
             command: 'bacon',  //The command to be called. With the standard command literal this would be: !bacon
@@ -80,7 +79,7 @@
         autodisable: true,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        lockskipPosition: 2,
+        lockskipPosition: 3,
         lockskipReasons: [
             ["theme", "This song does not fit the room theme. "],
             ["op", "This song is on the OP list. "],
@@ -93,8 +92,8 @@
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
-        motdInterval: 10,
-        motd: null,
+        motdInterval: 5,
+        motd: "Temporary Message of the Day",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
@@ -103,7 +102,7 @@
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
-        website: "http://www.reddit.com/r/trees",
+        website: null,
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
