@@ -14,15 +14,7 @@
 
         //Load custom settings set below
         bot.retrieveSettings();
-        /*
-	API.on(API.ADVANCE, function(){
-	   var waitlist = API.getWaitList()
-	   if (waitlist.length > 0) {
-    		API.sendChat ('/me @' + waitlist[1].username + ' You\'re up shortly!')
-    }
-    else {console.log('The waitlist is empty, fools')}
-});
-	*/
+      
         /*
          Extend the bot here, either by calling another function or here directly.
          Model code for a bot command:
