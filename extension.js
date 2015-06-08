@@ -1,6 +1,7 @@
 (function () {
-    //Link location of your fork so you don't have to modify so many things.
-    var fork = "Masterjh";
+    
+    //Change this to your GitHub username so you don't have to modify so many things.
+    var fork = "masterjh";
 		
     //Define our function responsible for extending the bot.
     function extend() {
@@ -57,16 +58,18 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "BlazeBot 4.2.0",
         language: "english",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true or false
+        autowoot: false,
+        smartSkip: true,
         cmdDeletion: true,
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-        maximumAfk: 120,
-        afkRemoval: false,
+        maximumAfk: 180,
+        afkRemoval: true,
         maximumDc: 30,
         bouncerPlus: false,
-        blacklistEnabled: false,
+        blacklistEnabled: true,
         lockdownEnabled: false,
         lockGuard: false,
         maximumLocktime: 10,
@@ -74,13 +77,14 @@
         maximumCycletime: 10,
         voteSkip: false,
         voteSkipLimit: 10,
+        historySkip: false,
         timeGuard: true,
         maximumSongLength: 8,
         autodisable: true,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        lockskipPosition: 3,
-        lockskipReasons: [
+        skipPosition: 2,
+        skipReasons: [
             ["theme", "This song does not fit the room theme. "],
             ["op", "This song is on the OP list. "],
             ["history", "This song is in the history. "],
@@ -97,23 +101,24 @@
         filterChat: true,
         etaRestriction: false,
         welcome: true,
-        opLink: null,
+        opLink: "http://www.last.fm/user/r_trees",
         rulesLink: "http://i.imgur.com/kHBa5wD.png",
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
-        website: null,
+        website: "http://www.reddit.com/r/trees",
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/NSFWlist.json",
+            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/OPlist.json",
+            BANNED: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/BANNEDlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/Masterjh/basicBot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/masterjh/basicBot/master/basicBot.js", extend);
 
 }).call(this);
