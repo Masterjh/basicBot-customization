@@ -62,13 +62,13 @@
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true or false
-        autowoot: true,
+        autowoot: false,
         autoskip: false,
         smartSkip: true,
         cmdDeletion: true,
         maximumAfk: 180,
         afkRemoval: true,
-        maximumDc: 60,
+        maximumDc: 30,
         bouncerPlus: false,
         blacklistEnabled: true,
         lockdownEnabled: false,
@@ -103,7 +103,7 @@
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: null,
+        rulesLink: "http://i.imgur.com/kHBa5wD.png",
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
