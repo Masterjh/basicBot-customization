@@ -1,8 +1,8 @@
 (function () {
-    
+
     //Change this to your GitHub username so you don't have to modify so many things.
     var fork = "masterjh";
-		
+
     //Define our function responsible for extending the bot.
     function extend() {
         //If the bot hasn't been loaded properly, try again in 1 second(s).
@@ -62,12 +62,13 @@
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true or false
-        autowoot: false,
+        autowoot: true,
+        autoskip: false,
         smartSkip: true,
         cmdDeletion: true,
         maximumAfk: 180,
         afkRemoval: true,
-        maximumDc: 30,
+        maximumDc: 60,
         bouncerPlus: false,
         blacklistEnabled: true,
         lockdownEnabled: false,
@@ -101,12 +102,12 @@
         filterChat: true,
         etaRestriction: false,
         welcome: true,
-        opLink: "http://www.last.fm/user/r_trees",
-        rulesLink: "http://i.imgur.com/kHBa5wD.png",
+        opLink: null,
+        rulesLink: null,
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
-        website: "http://www.reddit.com/r/trees",
+        website: null,
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
