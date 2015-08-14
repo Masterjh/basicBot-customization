@@ -103,7 +103,7 @@
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: "http://i.imgur.com/kHBa5wD.png",
+        rulesLink: "http://i.imgur.com/LEbdP4K.png",
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
