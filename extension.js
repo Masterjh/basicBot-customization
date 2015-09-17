@@ -69,7 +69,7 @@
         maximumAfk: 180,
         afkRemoval: true,
         maximumDc: 30,
-        bouncerPlus: false,
+        bouncerPlus: true,
         blacklistEnabled: true,
         lockdownEnabled: false,
         lockGuard: false,
@@ -103,7 +103,7 @@
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: "http://i.imgur.com/LEbdP4K.png",
+        rulesLink: "https://docs.google.com/document/d/10qCevj0xjCcao4spqY46MUTZlZNH0z0Z459VxFQWtbs/edit",
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
@@ -113,6 +113,7 @@
         songstats: true,
         commandLiteral: "!",
         blacklists: {
+            TEST: "https://rawgit.com/fviii/basicBot/blob/master/bl.json",
             NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/NSFWlist.json",
             OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/OPlist.json",
             BANNED: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/BANNEDlist.json"
